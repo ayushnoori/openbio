@@ -78,7 +78,7 @@
         }
         if ($('.services-list').length) {
             $('.services-list').owlCarousel({
-                loop: true,
+                loop: false,
                 nav: false,
                 dots: true,
                 items: 3,
@@ -111,8 +111,8 @@
                 loop: false,
                 nav: false,
                 dots: true,
-                items: 3,
-                autoplay: true,
+                items: 4,
+                autoplay: false,
                 smartSpeed: 700,
                 autoplayTimeout: 4000,
                 responsive: {
