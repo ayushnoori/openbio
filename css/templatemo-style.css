@@ -322,7 +322,8 @@ background: linear-gradient(to bottom, #4096ee 0%,#39ced6 100%); */
 a#logo {
   text-decoration: none;
   font-size: 32px;
-  text-transform: uppercase;
+  /* removed CSS */
+  /* text-transform: uppercase; */
   font-weight: 700;
 }
 .navbar {
@@ -422,11 +423,13 @@ a#logo {
   letter-spacing: 0.02em;
 }
 .welcome-box p {
-  max-width: 620px;
-  width:100%;
+  max-width: 900px;
+  /* replaced CSS */
+  /* max-width: 620px; */
+  width: 100%;
   margin:0 auto 30px;
   color: #fff;
-  margin-top: 30px; /* added CSS */
+  margin-top: 50px; /* added CSS */
 }
 .welcome-title {
   font-weight: 700;
