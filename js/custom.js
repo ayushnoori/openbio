@@ -163,7 +163,12 @@
                 scrollOverflow: true,
                 responsiveWidth: 768,
                 responsiveHeight: 600,
-                responsiveSlides: true
+                responsiveSlides: true,
+                // added more JS
+                // see documentation at https://github.com/alvarotrigo/fullPage.js
+                // scrollBar: true
+                scrollingSpeed: 1500
+                // loopBottom: true
             });
         }
         $(document).on('click', '.navbar-toggle', function() {
