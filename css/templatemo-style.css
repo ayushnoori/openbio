@@ -423,7 +423,7 @@ a#logo {
   letter-spacing: 0.02em;
 }
 .welcome-box p {
-  max-width: 60%;
+  max-width: 80%;
   /* replaced CSS */
   /* max-width: 620px; */
   width: 100%;
