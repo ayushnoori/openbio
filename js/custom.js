@@ -96,7 +96,7 @@
                         margin: 0
                     },
                     576: {
-                        items: 2,
+                        items: 3,
                         margin: 20
                     },
                     992: {
@@ -121,12 +121,13 @@
                         margin: 0
                     },
                     576: {
-                        items: 2,
-                        margin: 20
+                        items: 4,
+                        margin: 10
                     },
                     992: {
-                        items: 3,
-                        margin: 30
+                        items: 4,
+                        margin: 10
+
                     }
                 }
             });
