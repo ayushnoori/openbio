@@ -221,6 +221,8 @@ background: linear-gradient(to bottom, #4096ee 0%,#39ced6 100%);  */
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 40px;
+
 }
 .owl-carousel .owl-item {
   display: -webkit-box;
@@ -759,7 +761,7 @@ textarea.form-control {
 .contact-box {
   text-align:center;
   margin: auto;
-  width: 50%;
+  width: 70%;
 }
 .contact-box h4 {
   font-size:24px;
