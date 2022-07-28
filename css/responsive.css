@@ -198,7 +198,7 @@
 		position: fixed;
 		top: 0;
 		z-index: 6666;
-		background-color: rgba(250,250,250,0.9);
+		background-color: rgba(250,250,250,0.9) !important;
 	}
 	#navigation button i {
 		color: #13a872;
@@ -363,6 +363,10 @@
 	.welcome-title:before,.welcome-title:after {
 		width: 100%;
 	}
+	.welcome-title img{
+	  max-width: 100%;
+	}
+
 	h1, h2 {
 		font-size:30px;
 	}

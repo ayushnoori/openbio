@@ -25,6 +25,16 @@
                 return false;
             }
         }
+    }
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("header").style.top = "0";
+        } else {
+            document.getElementById("header").style.top = "-100px";
+        }
+        prevScrollpos = currentScrollPos;
     };
     $(document).ready(function() {
         $(window).on('load', function() {
@@ -168,7 +178,7 @@
                 // added more JS
                 // see documentation at https://github.com/alvarotrigo/fullPage.js
                 // scrollBar: true
-                scrollingSpeed: 1500
+                scrollingSpeed: 1500 
                 // loopBottom: true
             });
         }
@@ -203,6 +213,14 @@
             $('body').toggleClass('sidemenu-open');
         }).on('click', '.side-menu .navbar-nav li a', function() {
             $('body').removeClass('sidemenu-open');
+        });
+        $(window).on("scroll", function() {
+            if($(window).scrollTop() > 600) {
+                $("#header").addClass("scrollActive");
+            } else {
+                //remove the background property so it comes transparent again (defined in your css)
+               $("#header").removeClass("scrollActive");
+            }
         });
     });
 })(jQuery, window, document);

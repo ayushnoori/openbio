@@ -317,7 +317,14 @@ background: linear-gradient(to bottom, #4096ee 0%,#39ced6 100%); */
   right:0;
   top:0;
   z-index:999;
+  padding-bottom: 5px;
+  transition: top 0.3s, opacity 0.3s, background-color 1s;
 }
+
+#header.scrollActive {
+  background-color: rgba(24,181,165,0.9);
+}
+
 .container-fluid {
   padding:0 20px;
 }
@@ -330,6 +337,7 @@ a#logo {
 }
 .navbar {
   padding: 0;
+  transition:  top 0.3s;
 }
 .navbar-toggle {
   display:none;
@@ -447,6 +455,10 @@ a#logo {
   font-weight:300;
   line-height:1.2;
 }
+.welcome-title img{
+  max-width: 70%;
+}
+
 .welcome-box .btn {
   margin-top: 10px;
 }
