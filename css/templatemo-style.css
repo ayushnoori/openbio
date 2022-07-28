@@ -811,7 +811,13 @@ textarea.form-control {
 
 }
 .contact-row i.fa-envelope {
+  width:55px;
   font-size: 40px;
+  display:block;
+  justify-content: center;
+  font: 16px/1.6 'Raleway', Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-align:center;
 }
 
 /*==============================================
