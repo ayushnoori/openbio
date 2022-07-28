@@ -317,12 +317,12 @@ background: linear-gradient(to bottom, #4096ee 0%,#39ced6 100%); */
   right:0;
   top:0;
   z-index:999;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   transition: top 0.3s, opacity 0.3s, background-color 1s;
 }
 
 #header.scrollActive {
-  background-color: rgba(24,181,165,0.9);
+  background-color: rgba(1,226,125,1);
 }
 
 .container-fluid {
