@@ -149,7 +149,15 @@ video {
   top:0;
   right:0;
   bottom: 0;
+  transition: top 1s, opacity 1s, background-color 1s;
 }
+
+#video.scrollActive:after {
+    opacity: 1;
+    transition: top 1s, opacity 1s, background-color 1s;
+}
+
+
 
 /* old gradient colors
 background: #4096ee; 
@@ -322,7 +330,8 @@ background: linear-gradient(to bottom, #4096ee 0%,#39ced6 100%); */
 }
 
 #header.scrollActive {
-  background-color: rgba(1,226,125,1);
+  backdrop-filter: blur(18px);
+  height: 75px;
 }
 
 .container-fluid {
@@ -649,7 +658,8 @@ a#logo {
 .portfolio-item .thumb-inner h4 {
   margin-bottom: 0;
   font-size: 16px;
-  margin-top: -4px;
+  margin-top: -20px;
+  text-shadow:  1px 1px 7px black;
 }
 .portfolio-item .thumb-inner p {
   opacity: 0;

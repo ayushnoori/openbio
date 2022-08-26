@@ -171,14 +171,15 @@
                 lazyLoad: true,
                 navigation: true,
                 navigationPosition: 'right',
-                scrollOverflow: true,
+                scrollOverflow: false,
                 responsiveWidth: 768,
                 responsiveHeight: 600,
                 responsiveSlides: true,
                 // added more JS
                 // see documentation at https://github.com/alvarotrigo/fullPage.js
                 // scrollBar: true
-                scrollingSpeed: 1500 
+                scrollingSpeed: 1500,
+                autoScrolling: false
                 // loopBottom: true
             });
         }
@@ -217,9 +218,11 @@
         $(window).on("scroll", function() {
             if($(window).scrollTop() > 600) {
                 $("#header").addClass("scrollActive");
+                $("#video").addClass("scrollActive");
             } else {
                 //remove the background property so it comes transparent again (defined in your css)
-               $("#header").removeClass("scrollActive");
+                $("#header").removeClass("scrollActive");
+                $("#video").removeClass("scrollActive");
             }
         });
     });
