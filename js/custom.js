@@ -216,7 +216,7 @@
             $('body').removeClass('sidemenu-open');
         });
         $(window).on("scroll", function() {
-            if($(window).scrollTop() > 600) {
+            if($(window).scrollTop() > 500) {
                 $("#header").addClass("scrollActive");
                 $("#video").addClass("scrollActive");
             } else {

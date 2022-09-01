@@ -659,7 +659,7 @@ a#logo {
   margin-bottom: 0;
   font-size: 16px;
   margin-top: -20px;
-  text-shadow:  1px 1px 7px black;
+  text-shadow:  4px 2px 4px black;
 }
 .portfolio-item .thumb-inner p {
   opacity: 0;
@@ -675,6 +675,10 @@ a#logo {
   opacity: 1;
   visibility: visible;
   color: #4a4a4a;
+}
+
+.portfolio-item:hover .thumb-inner h4 {
+  text-shadow:  0px 0px 0px black;
 }
 .portfolio-item:hover .thumb-inner {
   border-radius: 10px;
