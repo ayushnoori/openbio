@@ -88,14 +88,14 @@
         }
         if ($('.services-list').length) {
             $('.services-list').owlCarousel({
-                loop: false,
+                loop: true,
                 nav: false,
                 dots: true,
                 items: 3,
                 margin: 30,
                 autoplay: false,
                 smartSpeed: 700,
-                autoplayTimeout: 6000,
+                autoplayTimeout: 5000,
                 responsive: {
                     0: {
                         items: 1,
@@ -111,7 +111,7 @@
                     },
                     992: {
                         items: 3,
-                        margin: 30
+                        margin: 20
                     }
                 }
             });
@@ -174,6 +174,7 @@
                 scrollOverflow: false,
                 responsiveWidth: 768,
                 responsiveHeight: 600,
+                fitToSection: false,
                 responsiveSlides: true,
                 // added more JS
                 // see documentation at https://github.com/alvarotrigo/fullPage.js
