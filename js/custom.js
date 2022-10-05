@@ -25,6 +25,16 @@
                 return false;
             }
         }
+    }
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("header").style.top = "0";
+        } else {
+            document.getElementById("header").style.top = "-100px";
+        }
+        prevScrollpos = currentScrollPos;
     };
     $(document).ready(function() {
         $(window).on('load', function() {
@@ -78,14 +88,14 @@
         }
         if ($('.services-list').length) {
             $('.services-list').owlCarousel({
-                loop: false,
+                loop: true,
                 nav: false,
                 dots: true,
                 items: 3,
                 margin: 30,
                 autoplay: false,
                 smartSpeed: 700,
-                autoplayTimeout: 6000,
+                autoplayTimeout: 5000,
                 responsive: {
                     0: {
                         items: 1,
@@ -96,12 +106,12 @@
                         margin: 0
                     },
                     576: {
-                        items: 2,
+                        items: 3,
                         margin: 20
                     },
                     992: {
                         items: 3,
-                        margin: 30
+                        margin: 20
                     }
                 }
             });
@@ -121,12 +131,13 @@
                         margin: 0
                     },
                     576: {
-                        items: 2,
-                        margin: 20
+                        items: 4,
+                        margin: 10
                     },
                     992: {
-                        items: 3,
-                        margin: 30
+                        items: 4,
+                        margin: 10
+
                     }
                 }
             });
@@ -160,14 +171,16 @@
                 lazyLoad: true,
                 navigation: true,
                 navigationPosition: 'right',
-                scrollOverflow: true,
+                scrollOverflow: false,
                 responsiveWidth: 768,
                 responsiveHeight: 600,
+                fitToSection: false,
                 responsiveSlides: true,
                 // added more JS
                 // see documentation at https://github.com/alvarotrigo/fullPage.js
                 // scrollBar: true
-                scrollingSpeed: 1500
+                scrollingSpeed: 1500,
+                autoScrolling: false
                 // loopBottom: true
             });
         }
@@ -202,6 +215,16 @@
             $('body').toggleClass('sidemenu-open');
         }).on('click', '.side-menu .navbar-nav li a', function() {
             $('body').removeClass('sidemenu-open');
+        });
+        $(window).on("scroll", function() {
+            if($(window).scrollTop() > 500) {
+                $("#header").addClass("scrollActive");
+                $("#video").addClass("scrollActive");
+            } else {
+                //remove the background property so it comes transparent again (defined in your css)
+                $("#header").removeClass("scrollActive");
+                $("#video").removeClass("scrollActive");
+            }
         });
     });
 })(jQuery, window, document);
